@@ -2,7 +2,6 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 .center {
@@ -13,7 +12,12 @@
 
 h1 {
     font-size: 28px;
-    font-weight:800px;
+    font-weight:700;
+}
+
+h2 {
+    font-size:20px;
+    font-weight:600;
 }
 
 /* =================== HEADER =================== */
@@ -139,8 +143,96 @@ nav {
 
 /* =================== RESTAURANTS =================== */
 
-.restaurants {
+.restaurant {
     background-color: #f6f6f6;
-    margin: 40px 0 0 0;
+    margin-top: 40px;
     padding-top:40px;
+    height:1000px;
 }
+
+.restaurant h1 {
+    margin-bottom: 20px;
+}
+
+.restaurant-card {
+    height:250px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #dfdede ;
+    margin-bottom: 20px;
+}
+
+.restaurant-card a{
+    text-decoration: none;
+    color: black;
+}
+
+.box-img {
+    height:175px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+}
+
+.box-img img{
+    object-fit:cover;
+    position: relative;
+    width:101%;
+}
+
+.bottom-card {
+    display:flex;
+    justify-content: space-between;
+    height:75px;
+}
+
+.restaurant-txt {
+    margin-left: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 4px;
+}
+
+
+.btn-jaime {
+    margin-right:35px;
+    background-color: #FFF;
+    border:none;
+}
+
+.btn-jaime svg{
+    width:21px;
+    fill: #ffffff;
+    stroke: #000000;
+    transform: scale(120%);
+    transition: all 0.25s ease;
+}
+
+.btn-jaime svg:hover{
+    fill: #9356DC;
+    stroke:#9356DC;
+}
+
+.restaurant-nouveau {
+    position: absolute;
+    right:10px;
+    top:10px;
+    width:80px;
+    height:30px;
+    background-color: #99E2D0;
+    box-shadow: 1px 1px 1px #99E2D0;
+    border-radius:2px;
+    color: #009b75;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.palette .box-img img {top: -38%;}
+.note .box-img img {top: -96%;width:100%;}
+.francaise .box-img img {top: -38%;width:100%;}
+.delice .box-img img {top: -42%;}
