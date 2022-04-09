@@ -1,6 +1,22 @@
-body {
+* {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
 }
+
+.center {
+    margin: 0 auto;
+    position: relative;
+    width:90%;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight:800px;
+}
+
+/* =================== HEADER =================== */
 
 .header-logo {
     display:flex;
@@ -11,7 +27,7 @@ body {
     box-shadow: 0 2px 10px #c5c5c5 ;
 }
 
-.header-position {
+.header-localisation {
     display:flex;
     justify-content:center;
     align-items:center;
@@ -19,9 +35,112 @@ body {
     width:100%;
     background-color:#00000010;
     color: #353535;
-    
+    font-weight: 500;
 }
 
-.header-position p {
+.header-localisation p {
     margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.header-explore {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    height:290px;
+    width:90%;
+}
+
+.header-explore h1 {
+    margin-top:35px;
+}
+
+.header-explore p {
+    font-size:18px;
+    margin: 10px  0 35px 0;
+}
+
+.header-explore a {
+    text-decoration: none;
+    width: 220px;
+    height:50px;
+    background: linear-gradient(to bottom right, #FF79DA , #9356DC );
+    border-radius:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* =================== FONCTIONNEMENT =================== */
+
+.fonctionnement-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+.fonctionnement h1 {
+    margin: 40px 0 25px 0;
+}
+
+.fonctionnement-box {
+    height:75px;
+    width:calc(100% - 12.5px);
+    background-color:#f6f6f6;
+    border-radius:20px;
+    margin-bottom:25px;
+    position: relative;
+    left:6.25px;
+    display:flex;
+    align-items:center;
+    box-shadow: 2px 2px 5px #dfdede ;
+}
+
+.fonctionnement .puce {
+    width:25px;
+    height:25px;
+    position:absolute;
+    left:-12.5px;
+    background-color: #9356DC ;
+    color:white;
+    border-radius:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.fonctionnement-box i{
+    color: #7e7e7e;
+    width:25%;
+    display:flex;
+    justify-content:center;
+    margin-right: -12.5px;
+}
+
+.fonctionnement-box:nth-child(3) {
+    background-color: #9356DC20;
+    box-shadow: 2px 2px 5px #9356DC40 ;
+
+}
+
+.fonctionnement-box:nth-child(3) i{
+    color: #9356DC;
+}
+
+/* =================== RESTAURANTS =================== */
+
+.restaurants {
+    background-color: #f6f6f6;
+    margin: 40px 0 0 0;
+    padding-top:40px;
 }
