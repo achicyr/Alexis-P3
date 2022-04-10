@@ -40,7 +40,7 @@ h2 {
     font-family: 'Shrikhand', cursive;
     font-weight:200;
     letter-spacing: 5px;
-    animation: flash 2s linear 2;
+    animation: flash 3s linear 1;
     background: linear-gradient(to right, #FF79DA 0%, #9356DC  100%);
     -webkit-background-clip: text;
 }
@@ -49,7 +49,14 @@ h2 {
     0% {
         color: rgba(234, 240, 246, 0);
     }
-    
+    40% {
+       
+        color:#99E2D0;
+    }
+    50% {
+        color: rgba(234, 240, 246, 0);
+    }
+
     90% {
        
         color:#99E2D0;
@@ -57,6 +64,7 @@ h2 {
     100% {
         color: rgba(234, 240, 246, 0);
     }
+    
 }
 
 .mot:nth-child(1){
@@ -73,7 +81,7 @@ h2 {
     opacity: 0%;
     animation-name: coucou; 
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
     animation-duration: 0s;
     background-color:white;
 }
@@ -236,6 +244,7 @@ nav {
     border-radius: 15px;
     box-shadow: 2px 2px 5px #dfdede ;
     margin-bottom: 20px;
+    transition: transform 0.5s ease;
 }
 
 .restaurant-card:hover {
@@ -287,6 +296,7 @@ nav {
     display:flex;
     align-items: center;
     margin-right:20px;
+    position: relative;
 }
 
 .btn-jaime{
@@ -298,9 +308,37 @@ nav {
     background-color:black;
 }
 
+.box-btn-jaime span{
+    height:30px;
+    width:30px;
+    transform: scale(1.45);
+    transition: all 0.25s ease;
+    clip-path:path('M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z');
+    background-color:black;
+    position: absolute;
+    z-index: -1;
+}
+
 .btn-jaime:hover{
-    background: linear-gradient(to top, #FF79DA , #9356DC );
-    clip-path:path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'); ;
+    background-color:white;
+    clip-path:path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+    animation: remplissage 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes remplissage {
+    0% {background: linear-gradient(to top, #FF79DA 10% , white 10%);}
+    10% {background: linear-gradient(to top, #FF79DA 10% , #9356DC 10%, rgba(234, 240, 246, 0) 10%);}
+    20% {background: linear-gradient(to top, #FF79DA 15% , #9356DC 20%, rgba(234, 240, 246, 0) 20%);}
+    30% {background: linear-gradient(to top, #FF79DA 15% , #9356DC 30%, rgba(234, 240, 246, 0) 30%);}
+    40% {background: linear-gradient(to top, #FF79DA 20% , #9356DC 40%, rgba(234, 240, 246, 0) 40%);}
+    50% {background: linear-gradient(to top, #FF79DA 25% , #9356DC 50%, rgba(234, 240, 246, 0) 50%);}
+    60% {background: linear-gradient(to top, #FF79DA 30% , #9356DC 60%, rgba(234, 240, 246, 0) 60%);}
+    70% {background: linear-gradient(to top, #FF79DA 35% , #9356DC 70%, rgba(234, 240, 246, 0) 70%);}
+    80% {background: linear-gradient(to top, #FF79DA 40% , #9356DC 80%, rgba(234, 240, 246, 0) 80%);}
+    90% {background: linear-gradient(to top, #FF79DA 45% , #9356DC 90%, rgba(234, 240, 246, 0) 90%);}
+    100% {background: linear-gradient(to top, #FF79DA 50%, #9356DC 100%);}
+    
 }
 
 .restaurant-nouveau {
@@ -353,8 +391,10 @@ h3 {
     justify-content:center;
 }
 
-.menu-footer p:hover, .menu-footer i:hover ~ .menu-footer p {
+.menu-footer p:hover {
     text-decoration: underline;
 }
 
-
+.menu-footer a > i:hover + p {
+    text-decoration: underline;
+}

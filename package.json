@@ -1,0 +1,22 @@
+{
+  "name": "projet-3-op",
+  "version": "1.0.0",
+  "description": "Projet 3 du parcours développeur web Openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Migmatic/Projet-3-OP.git"
+  },
+  "author": "Alexis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Migmatic/Projet-3-OP/issues"
+  },
+  "homepage": "https://github.com/Migmatic/Projet-3-OP#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}
