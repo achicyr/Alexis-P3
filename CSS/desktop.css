@@ -1,11 +1,5 @@
-body {
-    background-color: rgb(236, 226, 183);
-}
 
 .page {
     margin:0 auto;
     width:400px;
-    height:2000px;
-    background-color: white;
-    position: relative;
 }

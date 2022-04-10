@@ -7,7 +7,7 @@
 .center {
     margin: 0 auto;
     position: relative;
-    width:90%;
+    width:320px;
 }
 
 h1 {
@@ -19,6 +19,75 @@ h2 {
     font-size:20px;
     font-weight:600;
 }
+
+/* =================== LOADER =================== */
+
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #99E2D0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mot {
+    color: #99E2D0;
+    font-size: 80px;
+    font-family: 'Shrikhand', cursive;
+    font-weight:200;
+    letter-spacing: 5px;
+    animation: flash 2s linear 2;
+    background: linear-gradient(to right, #FF79DA 0%, #9356DC  100%);
+    -webkit-background-clip: text;
+}
+
+@keyframes flash {
+    0% {
+        color: rgba(234, 240, 246, 0);
+    }
+    
+    90% {
+       
+        color:#99E2D0;
+    }
+    100% {
+        color: rgba(234, 240, 246, 0);
+    }
+}
+
+.mot:nth-child(1){
+    animation-delay: 0.1s;
+}
+.mot:nth-child(2){
+    animation-delay: 0.6s;
+}
+.mot:nth-child(3){
+    animation-delay: 1.1s;
+}
+
+.page {
+    opacity: 0%;
+    animation-name: coucou; 
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-duration: 0s;
+    background-color:white;
+}
+
+@keyframes coucou {
+    from {
+        opacity: 0%;
+    }
+  
+    to {
+        opacity: 100%;
+    }
+  }
+
 
 /* =================== HEADER =================== */
 
@@ -82,6 +151,12 @@ nav {
     justify-content:center;
     color: #fff;
     font-weight: 600;
+    box-shadow: 2px 2px 5px #86868650 ;
+}
+
+.header-explore a:hover {
+    background: linear-gradient(to bottom right, #FF79DA99 , #9356DC99 );
+    box-shadow: 2px 2px 5px #868686;
 }
 
 /* =================== FONCTIONNEMENT =================== */
@@ -147,7 +222,7 @@ nav {
     background-color: #f6f6f6;
     margin-top: 40px;
     padding-top:40px;
-    height:1000px;
+    padding-bottom:40px;
 }
 
 .restaurant h1 {
@@ -161,6 +236,10 @@ nav {
     border-radius: 15px;
     box-shadow: 2px 2px 5px #dfdede ;
     margin-bottom: 20px;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);  
 }
 
 .restaurant-card a{
@@ -180,8 +259,14 @@ nav {
 .box-img img{
     object-fit:cover;
     position: relative;
+    height:auto;
     width:101%;
 }
+
+.palette .box-img img {top: -23%;}
+.note .box-img img {top: -79%; width:100%;}
+.francaise .box-img img {top: -22%;}
+.delice .box-img img {top: -26%;}
 
 .bottom-card {
     display:flex;
@@ -197,24 +282,25 @@ nav {
     gap: 4px;
 }
 
-
-.btn-jaime {
-    margin-right:35px;
-    background-color: #FFF;
-    border:none;
+.box-btn-jaime {
+    height:75px;
+    display:flex;
+    align-items: center;
+    margin-right:20px;
 }
 
-.btn-jaime svg{
-    width:21px;
-    fill: #ffffff;
-    stroke: #000000;
-    transform: scale(120%);
+.btn-jaime{
+    height:30px;
+    width:30px;
+    transform: scale(1.5);
     transition: all 0.25s ease;
+    clip-path:path('M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z');
+    background-color:black;
 }
 
-.btn-jaime svg:hover{
-    fill: #9356DC;
-    stroke:#9356DC;
+.btn-jaime:hover{
+    background: linear-gradient(to top, #FF79DA , #9356DC );
+    clip-path:path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'); ;
 }
 
 .restaurant-nouveau {
@@ -232,7 +318,43 @@ nav {
     align-items:center;
 }
 
-.palette .box-img img {top: -38%;}
-.note .box-img img {top: -96%;width:100%;}
-.francaise .box-img img {top: -38%;width:100%;}
-.delice .box-img img {top: -42%;}
+/* =================== FOOTER =================== */
+
+footer {
+    padding-top:20px;
+    padding-bottom: 40px;
+    background-color: #353535;
+    color: #fff;
+}
+
+h3 {
+    margin-bottom:20px;
+    font-family: 'Shrikhand', cursive;
+    font-weight:200;
+}
+
+.menu-footer {
+    list-style: none;
+}
+
+.menu-footer a{
+    text-decoration: none;
+    color:white;
+    display:flex;
+    margin-bottom: 8px;
+}
+
+.menu-footer i {
+    margin-right: 5px;
+    font-size:12px;
+    width:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.menu-footer p:hover, .menu-footer i:hover ~ .menu-footer p {
+    text-decoration: underline;
+}
+
+
