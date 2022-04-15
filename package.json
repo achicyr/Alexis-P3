@@ -4,7 +4,8 @@
   "description": "Projet 3 du parcours développeur web Openclassroom",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/index.scss css/index.css -w"
   },
   "repository": {
     "type": "git",
