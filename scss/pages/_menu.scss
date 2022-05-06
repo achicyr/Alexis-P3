@@ -1,0 +1,21 @@
+
+.menu {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    margin-top: -40px;
+    background-color: #f6f6f6;
+    padding-bottom: 80px;
+}
+
+h5:after{
+    height:3px;
+    width:40px;
+    background-color: #99E2D0;
+    margin-top: 8px;
+    content: "";
+    display: block;
+}
+
+.menu .btnViose {
+    margin: 50px auto 0 auto;
+}

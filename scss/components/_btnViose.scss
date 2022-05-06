@@ -1,0 +1,19 @@
+
+.btnViose {
+    text-decoration: none;
+    width: 220px;
+    height:50px;
+    background: linear-gradient(to bottom right, #FF79DA , #9356DC );
+    border-radius:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px #86868650 ;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+        background: linear-gradient(to bottom right, #FF79DA99 , #9356DC99 );
+        box-shadow: 2px 2px 5px #868686;
+    }
+}

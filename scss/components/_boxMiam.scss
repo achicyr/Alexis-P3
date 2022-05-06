@@ -1,0 +1,89 @@
+
+.boxMiam {
+    background-color: #fff;
+    width: 100%;
+    height:68px;
+    border-radius:15px;
+    box-shadow:2px 2px 5px #b3b3b350;
+    padding-left: 15px;
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+@mixin miam($fs:16px,$m:0 15px,$gap:5px){
+    font-size: $fs;
+    gap: $gap;
+    height: 100%;
+    flex:1;
+    &__assiette{
+        @extend %miam__assiette;
+    }
+    &__infos{
+        @extend %miam__infos;
+        display:flex;
+        justify-content: space-between;
+        p{
+            width:100px;
+            flex-grow: 5;
+        }
+        span{
+            font-weight: bold;
+            margin: $m;
+        }
+    }     
+}
+
+%miam__assiette{
+    font-weight: bold;
+}
+
+%miam__infos{    
+    font-size:15px;
+    p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+} 
+
+
+.miam {
+    @include miam;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.depli{
+    background-color: #99E2D0;
+    width: 0;
+    height:100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:rgba(255,255,255,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:24px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.boxMiam:hover > .depli {
+    width:60px;
+    color: #fff;
+}
+
+.boxMiam:hover > .depli i{
+    animation: rotate 0.5s ease-in-out;    
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}

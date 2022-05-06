@@ -1,0 +1,58 @@
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #99E2D0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .mot {
+        color: #99E2D0;
+        font-size: 80px;
+        font-family: 'Shrikhand', cursive;
+        font-weight:200;
+        letter-spacing: 5px;
+        background: linear-gradient(to right, #FF79DA 0%, #9356DC  100%);
+        -webkit-background-clip: text;
+        animation: loading 1.6s linear 2;
+    }
+
+}
+
+@keyframes loading {
+    0% {
+        color: rgba(234, 240, 246, 0);
+    }
+
+    90% {
+        color: #99E2D0;
+        
+    }
+    100% {
+        color: rgba(234, 240, 246, 0);
+    }
+}
+
+.mot:nth-child(1){animation-delay: 0.1s;}
+.mot:nth-child(2){animation-delay: 0.8s;}
+.mot:nth-child(3){animation-delay: 1.5s;}
+
+.page {
+    opacity: 0%;
+    animation-name: coucou; 
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-duration: 0s;
+    background-color:white;
+}
+
+@keyframes coucou {
+    from {
+        opacity: 0%;
+    }
+  
+    to {
+        opacity: 100%;
+    }
+  }
