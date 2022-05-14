@@ -16,4 +16,7 @@
         background: linear-gradient(to bottom right, #FF79DA99 , #9356DC99 );
         box-shadow: 2px 2px 5px #868686;
     }
+    @include tablette-only{
+        margin: 0 auto;
+    }
 }

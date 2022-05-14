@@ -1,0 +1,30 @@
+
+@mixin mobile-only {
+    @media screen and (max-width:map-get($breakpoints,mobile)) {
+        @content;
+    }
+}
+
+@mixin mobilelarge-only {
+    @media screen and (min-width:calc(map-get($breakpoints,mobile) + 1px)) and (max-width:map-get($breakpoints,mobilelarge)){
+        @content;
+    }
+}
+
+@mixin tablette-only {
+    @media screen and (min-width:calc(map-get($breakpoints,mobilelarge) + 1px)) and (max-width:map-get($breakpoints,tablette)){
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width:calc(map-get($breakpoints,tablette) + 1px)) and (max-width:map-get($breakpoints,desktop)){
+        @content;
+    }
+} 
+
+@mixin to-the-moon {
+    @media screen and (min-width:calc(map-get($breakpoints,desktop) + 1px)){
+        @content;
+    }
+} 

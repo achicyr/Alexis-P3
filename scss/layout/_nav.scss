@@ -11,13 +11,26 @@
         align-items:center;
         text-align: center;
         height:290px;
-        width:90%;
+        @include tablette-only{
+            height: 220px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
         h1 {
             margin-top:35px;
+            @include tablette-only{
+                width:100%;
+            }
         }
         p {
             font-size:18px;
             margin: 10px  0 35px 0;
+            @include tablette-only{
+                width:50%;
+                margin: auto 0;
+            }
         }
     }
 }

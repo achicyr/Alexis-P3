@@ -17,11 +17,14 @@
         display:flex;
         align-items:center;
         box-shadow: 2px 2px 5px #dfdede ;
+        font-size: 19px;
+        font-weight: 500;
         &--purple{
             background-color: #9356DC20;
             box-shadow: 2px 2px 5px #9356DC40 ;
             i{
                 color: #9356DC;
+                
             }
         }
         i {
@@ -30,6 +33,7 @@
             display:flex;
             justify-content:center;
             margin-right: -12.5px;
+            font-size:22px;
         }
     }
 }
@@ -39,7 +43,7 @@
 }
 
 
-.fonctionnement .puce {
+.fonctContainer__box .puce {
     width:25px;
     height:25px;
     position:absolute;
@@ -51,6 +55,7 @@
     align-items:center;
     justify-content:center;
     line-height: initial;
+    font-size:16px;
 }
 
 /* =================== RESTAURANTS =================== */
