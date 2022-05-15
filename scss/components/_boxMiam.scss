@@ -10,6 +10,9 @@
     justify-content:space-between;
     cursor: pointer;
     margin-bottom: 15px;
+    @include desktop-only{
+        width:310px;
+    }  
 }
 
 @mixin miam($fs:16px,$m:0 15px,$gap:5px){

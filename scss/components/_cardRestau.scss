@@ -59,6 +59,10 @@
         width:350px;
         margin-bottom:0; 
         }
+    @include desktop-only{
+        width:310px;
+        margin-bottom:0; 
+        }
 }
 
 .cardRestau__bottom .bottom{

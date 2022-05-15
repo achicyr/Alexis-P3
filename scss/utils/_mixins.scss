@@ -18,13 +18,14 @@
 }
 
 @mixin desktop-only {
-    @media screen and (min-width:calc(map-get($breakpoints,tablette) + 1px)) and (max-width:map-get($breakpoints,desktop)){
+    @media screen and (min-width:calc(map-get($breakpoints,tablette) + 1px)){
         @content;
     }
 } 
 
-@mixin to-the-moon {
-    @media screen and (min-width:calc(map-get($breakpoints,desktop) + 1px)){
+
+@mixin desktop-and-tablette {
+    @media screen and (min-width:calc(map-get($breakpoints,mobilelarge) + 1px)){
         @content;
     }
 } 

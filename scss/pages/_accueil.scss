@@ -28,7 +28,11 @@
             &:nth-child(3){
                 align-self:flex-end;
             } 
-        }     
+        }
+        @include desktop-only{
+            width:290px;
+            height:60px;
+        }      
         i {
             color: #7e7e7e;
             width:25%;
@@ -46,6 +50,10 @@
             }
         }
     }
+    @include desktop-only{
+        flex-direction: row;
+        justify-content: space-around;
+    }  
 }
 
 .fonctionnement h1 {
@@ -101,4 +109,7 @@
     display: flex;
     flex-wrap: wrap;
     gap:40px;
+    @include desktop-only{
+        gap: 47px;
+        }
 }

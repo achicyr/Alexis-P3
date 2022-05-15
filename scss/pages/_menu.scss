@@ -5,6 +5,12 @@
     margin-top: -40px;
     background-color: #f6f6f6;
     padding-bottom: 80px;
+    &__box{
+        @include desktop-only{
+            display: flex;
+            justify-content: space-between;
+        } 
+    }
 }
 
 h5:after{
@@ -18,4 +24,12 @@ h5:after{
 
 .menu .btnViose {
     margin: 50px auto 0 auto;
+}
+
+h2{
+    @include desktop-only{
+        justify-content: center;
+        padding: 30px;
+        font-size: 30px;
+    }
 }

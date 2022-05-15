@@ -50,7 +50,21 @@ h4 {
     @include desktop-only{
         width:1024px;
     }
-    @include to-the-moon{
-        width:1300px;
+}
+
+.center2{
+    margin: 0 auto;
+    position: relative;
+    @include mobile-only{
+        width:320px; 
+    }
+    @include mobilelarge-only{
+        width:460px;
+    }
+    @include tablette-only{
+        width:740px; 
+    }
+    @include desktop-only{
+        width:1024px;
     }
 }

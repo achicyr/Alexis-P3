@@ -26,10 +26,20 @@
         & p:hover{
             text-decoration: underline;
         }
+        @include desktop-only{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        } 
     }
 }
 
-
+@include desktop-only{
+    footer h3{
+        display: flex;
+        justify-content: center;
+    }
+} 
 
 
 

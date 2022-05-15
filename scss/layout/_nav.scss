@@ -23,6 +23,11 @@
             @include tablette-only{
                 width:100%;
             }
+            @include desktop-only{
+                position: absolute;
+                top: -140px;
+                left: -240px
+            }
         }
         p {
             font-size:18px;
@@ -31,10 +36,18 @@
                 width:50%;
                 margin: auto 0;
             }
+            @include desktop-only{
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 23px;
+                width: 360px;
+            }
         }
     }
     @include desktop-only{
         background:none;
+        width:512px;
+        padding-top:250px;
     }
 }
 
