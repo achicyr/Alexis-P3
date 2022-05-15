@@ -14,6 +14,17 @@
             position:absolute;
             left:22px;
         }
+        @include desktop-only{
+            position:absolute;
+            width:auto;
+            height:auto;
+            box-shadow: none;
+            top:10px;
+            left:10px;
+            svg path {
+                fill:#fff;
+            } 
+        }      
     }
 
     &__localisation {
@@ -24,7 +35,7 @@
         width:100%;
         background-color:#00000010;
         color: #353535;
-        font-weight: 500;
+        font-weight: 500; 
 
         p{margin-left: 20px;}
     }
@@ -33,6 +44,10 @@
         background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
         height:260px;
         background-size: cover;
+    }
+    @include desktop-only{
+        background-image: url("../images/Rectangle 3.png");
+        background-repeat:no-repeat;
     }
 }
 

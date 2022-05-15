@@ -19,14 +19,16 @@
         box-shadow: 2px 2px 5px #dfdede ;
         font-size: 19px;
         font-weight: 500;
-        &--purple{
-            background-color: #9356DC20;
-            box-shadow: 2px 2px 5px #9356DC40 ;
-            i{
-                color: #9356DC;
-                
+        @include tablette-only{
+            margin-bottom: 35px;
+            width:450px;
+            &:nth-child(1){
+                align-self:flex-start;
             }
-        }
+            &:nth-child(3){
+                align-self:flex-end;
+            } 
+        }     
         i {
             color: #7e7e7e;
             width:25%;
@@ -34,6 +36,14 @@
             justify-content:center;
             margin-right: -12.5px;
             font-size:22px;
+        }
+        &--purple{
+            background-color: #9356DC20;
+            box-shadow: 2px 2px 5px #9356DC40 ;
+            i{
+                color: #9356DC;
+                
+            }
         }
     }
 }
@@ -58,6 +68,21 @@
     font-size:16px;
 }
 
+.fonctContainer__box .fa-reply{
+    display:none;
+    @include tablette-only{
+        display:block;
+        width:80px;
+        height:80px;
+        font-size:50px;
+        color:#97F1D1;
+        transform: rotate(180deg);
+        position:absolute;
+        left: -110px;
+        top: -21px;
+        }
+}
+
 /* =================== RESTAURANTS =================== */
 
 .restaurant {
@@ -72,3 +97,8 @@
 }
 
 
+.restaurant .box-restau {
+    display: flex;
+    flex-wrap: wrap;
+    gap:40px;
+}

@@ -55,6 +55,10 @@
         font-family: "Roboto", sans-serif;
         line-height: initial; 
     }
+    @include tablette-only{
+        width:350px;
+        margin-bottom:0; 
+        }
 }
 
 .cardRestau__bottom .bottom{

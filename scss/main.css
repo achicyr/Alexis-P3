@@ -265,6 +265,12 @@ h4 {
   font-family: "Roboto", sans-serif;
   line-height: initial;
 }
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+  .cardRestau {
+    width: 350px;
+    margin-bottom: 0;
+  }
+}
 
 .cardRestau__bottom .bottom__txt {
   margin-left: 15px;
@@ -491,6 +497,19 @@ h4 {
   position: absolute;
   left: 22px;
 }
+@media screen and (min-width: 1061px) and (max-width: 1400px) {
+  .header__logo {
+    position: absolute;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    top: 10px;
+    left: 10px;
+  }
+  .header__logo svg path {
+    fill: #fff;
+  }
+}
 .header__localisation {
   display: flex;
   justify-content: center;
@@ -508,6 +527,12 @@ h4 {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   height: 260px;
   background-size: cover;
+}
+@media screen and (min-width: 1061px) and (max-width: 1400px) {
+  .header {
+    background-image: url("../images/Rectangle 3.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .nav {
@@ -548,6 +573,11 @@ h4 {
   .nav__explore p {
     width: 50%;
     margin: auto 0;
+  }
+}
+@media screen and (min-width: 1061px) and (max-width: 1400px) {
+  .nav {
+    background: none;
   }
 }
 
@@ -624,12 +654,17 @@ h5:after {
   font-size: 19px;
   font-weight: 500;
 }
-.fonctContainer__box--purple {
-  background-color: rgba(147, 86, 220, 0.1254901961);
-  box-shadow: 2px 2px 5px rgba(147, 86, 220, 0.2509803922);
-}
-.fonctContainer__box--purple i {
-  color: #9356DC;
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+  .fonctContainer__box {
+    margin-bottom: 35px;
+    width: 450px;
+  }
+  .fonctContainer__box:nth-child(1) {
+    align-self: flex-start;
+  }
+  .fonctContainer__box:nth-child(3) {
+    align-self: flex-end;
+  }
 }
 .fonctContainer__box i {
   color: #7e7e7e;
@@ -638,6 +673,13 @@ h5:after {
   justify-content: center;
   margin-right: -12.5px;
   font-size: 22px;
+}
+.fonctContainer__box--purple {
+  background-color: rgba(147, 86, 220, 0.1254901961);
+  box-shadow: 2px 2px 5px rgba(147, 86, 220, 0.2509803922);
+}
+.fonctContainer__box--purple i {
+  color: #9356DC;
 }
 
 .fonctionnement h1 {
@@ -659,6 +701,23 @@ h5:after {
   font-size: 16px;
 }
 
+.fonctContainer__box .fa-reply {
+  display: none;
+}
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+  .fonctContainer__box .fa-reply {
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    color: #97F1D1;
+    transform: rotate(180deg);
+    position: absolute;
+    left: -110px;
+    top: -21px;
+  }
+}
+
 /* =================== RESTAURANTS =================== */
 .restaurant {
   background-color: #f6f6f6;
@@ -669,6 +728,12 @@ h5:after {
 
 .restaurant h1 {
   margin-bottom: 20px;
+}
+
+.restaurant .box-restau {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 /* THEMES */

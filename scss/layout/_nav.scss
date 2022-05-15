@@ -33,6 +33,9 @@
             }
         }
     }
+    @include desktop-only{
+        background:none;
+    }
 }
 
 
